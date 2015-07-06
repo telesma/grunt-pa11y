@@ -41,7 +41,7 @@
     "accessibility"
   ],
   "dependencies": {
-    "async": "^0.9.0",
+    "async": "^1.3.0",
     "pa11y": "^2.3.0",
     "portscanner": "^1.0.0"
   }
