@@ -20,7 +20,7 @@ module.exports = function(grunt) {
 
     // Merge task-specific and/or target-specific options with these defaults.
     var options = this.options({
-      reporter: 'console',
+      reporter: 'cli',
       standard: 'WCAG2AA',
       htmlcs: 'http://squizlabs.github.io/HTML_CodeSniffer/build/HTMLCS.js',
       config: null,
@@ -57,7 +57,7 @@ module.exports = function(grunt) {
         },
         sniff: function(cb){
           // Pa11y
-          pa11y.sniff(options, function(err, results) {
+          pa11y(options, function(err, results) {
             if (err) {
               return cb(err);
             }
